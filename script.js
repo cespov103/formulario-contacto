@@ -1,7 +1,7 @@
 document.getElementById('contactForm').addEventListener('submit',function(event){
     event.preventDefault();
 
-    // Validación básica
+    // Validación básica y obtención de datos
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
@@ -14,7 +14,9 @@ document.getElementById('contactForm').addEventListener('submit',function(event)
 
         // Resetear el formulario
         document.getElementById('contactForm').reset();
+
     } else {
+        // Alerta si algún campo está vacío
         alert('Por favor, complete todos los campos del formulario.');
     }
 })
